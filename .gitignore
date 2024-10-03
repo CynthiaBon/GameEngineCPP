@@ -16,3 +16,7 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+*.obj
+*.exe
+GameEngineCPP/x64/
+GameEngineCPP/x32/
