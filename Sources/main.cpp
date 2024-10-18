@@ -1,5 +1,7 @@
 #include "../Engine/Includes/GameEngine.h"
 #include "../Engine/Includes/FlyCam.h"
+#include "../Card.h"
+#include "../EffectAnimation.h"
 
 /*
 	Keywords :
@@ -34,8 +36,21 @@ void runGame()
 	GameObject* camera = Camera::getMain()->getGameObject();
 	FlyCam* camera_controller = new FlyCam(camera, 5.0f, 10.0f);
 
+	GameObject* card = GameEngine::createGameObject("Card", glm::vec3(0.0f, -0.3f, 0.0f));
+	Card* card_component = new Card(card, "CardComponent", 1, 5, "Images/Card.png");
+
+	GameObject* target = GameEngine::createGameObject("Target", glm::vec3(10.0f, 0.0f, 0.0f), glm::vec3(0.0f, 90.0f, 0.0f));
+	card_component->moveAndRotateTo(target, 10.0f);
+
+	IAnimation* effect = new EffectAnimation();
+
 	while (!GameEngine::getInstance()->shouldClose())
 	{
+		if (GameEngine::getInstance()->isKeyPressed(GLFW_KEY_1))
+			effect->play(0);
+		else if (GameEngine::getInstance()->isKeyPressed(GLFW_KEY_2))
+			effect->play(1);
+
 		try
 		{
 			GameEngine::getInstance()->update();

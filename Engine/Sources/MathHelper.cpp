@@ -20,6 +20,11 @@ glm::vec4 lerp(glm::vec4 a, glm::vec4 b, float t)
 	return glm::vec4(lerp(a.x, b.x, t), lerp(a.y, b.y, t), lerp(a.z, b.z, t), lerp(a.w, b.w, t));
 }
 
+float linear(float x)
+{
+	return x;
+}
+
 float easeInQuad(float x)
 {
 	return x * x;
@@ -33,4 +38,12 @@ float easeOutQuad(float x)
 float easeInOutQuad(float x)
 {
 	return x < 0.5 ? 2 * x * x : 1 - pow(-2 * x + 2, 2) / 2;
+}
+
+float easeSin(float x)
+{
+	float result = sin(x * M_PI);
+	if (result < 0.0f)
+		result = 0.0f;
+	return result;
 }

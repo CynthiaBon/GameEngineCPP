@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Card.cpp" />
+    <ClCompile Include="EffectAnimation.cpp" />
     <ClCompile Include="Engine\Sources\Camera.cpp" />
     <ClCompile Include="Engine\Sources\Canvas.cpp" />
     <ClCompile Include="Engine\Sources\Debug.cpp" />
@@ -41,9 +43,13 @@
     <ClCompile Include="Engine\Sources\TextRenderer.cpp" />
     <ClCompile Include="Engine\Sources\Texture.cpp" />
     <ClCompile Include="Engine\Sources\Transform.cpp" />
+    <ClCompile Include="Interpolator.cpp" />
+    <ClCompile Include="ObjectAnimation.cpp" />
     <ClCompile Include="Sources\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Card.h" />
+    <ClInclude Include="EffectAnimation.h" />
     <ClInclude Include="Engine\Includes\Camera.h" />
     <ClInclude Include="Engine\Includes\Canvas.h" />
     <ClInclude Include="Engine\Includes\Character.h" />
@@ -71,6 +77,9 @@
     <ClInclude Include="Engine\Includes\Texture.h" />
     <ClInclude Include="Engine\Includes\Transform.h" />
     <ClInclude Include="Engine\Includes\Vertex.h" />
+    <ClInclude Include="IAnimation.h" />
+    <ClInclude Include="Interpolator.h" />
+    <ClInclude Include="ObjectAnimation.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Engine\GLSL\fragment_core.glsl" />
