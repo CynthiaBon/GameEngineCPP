@@ -1,5 +1,7 @@
 #include "Card.h"
 
+//glm::vec3(0.225f, 0.03f, 0.375f), glm::vec3(0.0f), glm::vec3(0.06f)
+
 Card::Card(GameObject* object, std::string name, int attack, int health, std::string texture_path) : MonoBehaviour(object)
 {
 	m_name = name;

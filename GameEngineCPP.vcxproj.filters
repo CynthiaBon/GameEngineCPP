@@ -108,6 +108,42 @@
     <ClCompile Include="EffectAnimation.cpp">
       <Filter>Source Files\Sources</Filter>
     </ClCompile>
+    <ClCompile Include="RacaillouAnimation.cpp">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Chimimi.cpp">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="MobAnimation.cpp">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SlimeAnimation.cpp">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="JoeAnimation.cpp">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="AghorAnimation.cpp">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Deck.cpp">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Hand.cpp">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="LopmonAnimation.cpp">
+      <Filter>Source Files\Sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\Includes\Camera.h">
@@ -204,6 +240,42 @@
       <Filter>Header Files\Headers</Filter>
     </ClInclude>
     <ClInclude Include="EffectAnimation.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="RacaillouAnimation.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Chimimi.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="MobAnimation.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SlimeAnimation.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="JoeAnimation.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="AghorAnimation.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Deck.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Hand.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>Header Files\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="LopmonAnimation.h">
       <Filter>Header Files\Headers</Filter>
     </ClInclude>
   </ItemGroup>

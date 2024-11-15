@@ -13,3 +13,10 @@ float easeInQuad(float x);
 float easeOutQuad(float x);
 float easeInOutQuad(float x);
 float easeSin(float x);
+
+float easeOutBack(float x);
+float easeOutBounce(float x);
+float easeInBounce(float x);
+float easeInOutBounce(float x);
+float easeInElastic(float x);
+float easeInOutCirc(float x);

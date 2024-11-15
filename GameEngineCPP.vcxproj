@@ -19,7 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AghorAnimation.cpp" />
     <ClCompile Include="Card.cpp" />
+    <ClCompile Include="Chimimi.cpp" />
+    <ClCompile Include="Deck.cpp" />
     <ClCompile Include="EffectAnimation.cpp" />
     <ClCompile Include="Engine\Sources\Camera.cpp" />
     <ClCompile Include="Engine\Sources\Canvas.cpp" />
@@ -43,12 +46,24 @@
     <ClCompile Include="Engine\Sources\TextRenderer.cpp" />
     <ClCompile Include="Engine\Sources\Texture.cpp" />
     <ClCompile Include="Engine\Sources\Transform.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="Hand.cpp" />
     <ClCompile Include="Interpolator.cpp" />
+    <ClCompile Include="JoeAnimation.cpp" />
+    <ClCompile Include="LopmonAnimation.cpp" />
+    <ClCompile Include="MobAnimation.cpp" />
     <ClCompile Include="ObjectAnimation.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="RacaillouAnimation.cpp" />
+    <ClCompile Include="SlimeAnimation.cpp" />
     <ClCompile Include="Sources\main.cpp" />
+    <ClCompile Include="Terrain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AghorAnimation.h" />
     <ClInclude Include="Card.h" />
+    <ClInclude Include="Chimimi.h" />
+    <ClInclude Include="Deck.h" />
     <ClInclude Include="EffectAnimation.h" />
     <ClInclude Include="Engine\Includes\Camera.h" />
     <ClInclude Include="Engine\Includes\Canvas.h" />
@@ -77,9 +92,18 @@
     <ClInclude Include="Engine\Includes\Texture.h" />
     <ClInclude Include="Engine\Includes\Transform.h" />
     <ClInclude Include="Engine\Includes\Vertex.h" />
+    <ClInclude Include="GameManager.h" />
+    <ClInclude Include="Hand.h" />
     <ClInclude Include="IAnimation.h" />
     <ClInclude Include="Interpolator.h" />
+    <ClInclude Include="JoeAnimation.h" />
+    <ClInclude Include="LopmonAnimation.h" />
+    <ClInclude Include="MobAnimation.h" />
     <ClInclude Include="ObjectAnimation.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="RacaillouAnimation.h" />
+    <ClInclude Include="SlimeAnimation.h" />
+    <ClInclude Include="Terrain.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Engine\GLSL\fragment_core.glsl" />
