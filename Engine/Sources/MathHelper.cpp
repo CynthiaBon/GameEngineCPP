@@ -109,3 +109,16 @@ float easeInOutCirc(float x)
 		? (1 - sqrt(1 - pow(2 * x, 2))) / 2
 		: (sqrt(1 - pow(-2 * x + 2, 2)) + 1) / 2;
 }
+
+float shake(float x)
+{
+	float result = sin(x * M_PI) * abs(sin(x * M_PI * 5.0f));
+	if (result < 0.0f)
+		result = 0.0f;
+	return result;
+}
+
+float jump(float x)
+{
+	return abs(sin(x * M_PI * 2));
+}

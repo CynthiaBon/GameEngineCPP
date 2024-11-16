@@ -16,7 +16,10 @@ Interpolator::~Interpolator()
 float Interpolator::update(float delta_time)
 {
 	m_current_time += delta_time;
-	return lerp(m_begin, m_end, m_interp(m_current_time / m_duration));
+	float t = m_current_time / m_duration;
+	if (t > 1.0f)
+		t = 1.0f;
+	return lerp(m_begin, m_end, m_interp(t));
 }
 
 bool Interpolator::isFinished()

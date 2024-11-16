@@ -31,6 +31,7 @@ public:
 	Shader* getShader();
 	void sendToShader();
 	void unbindTextures();
+	Texture* getTexture();
 
 private:
 	ShaderProperty* getExposedProperty(std::string property_name);

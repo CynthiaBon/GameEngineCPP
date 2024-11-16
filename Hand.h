@@ -9,4 +9,5 @@ public:
 	~Hand();
 
 	void addCard(Card* card) override;
+	void shiftCards();
 };

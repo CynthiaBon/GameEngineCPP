@@ -35,27 +35,18 @@ void initializeEngine()
 void runGame()
 {
 	GameObject* camera = Camera::getMain()->getGameObject();
-	FlyCam* camera_controller = new FlyCam(camera, 5.0f, 10.0f);
+	camera->getTransform()->setPosition(0.0f, 4.5f, 0.0f);
+	camera->getTransform()->setRotation(-90.0f, 0.0f, 0.0f);
 
-	//GameObject* card = GameEngine::createGameObject("Card", glm::vec3(0.0f, 0.0f, 0.0f));
-	//Card* card_component = new Card(card, "CardComponent", 1, 5, "Images/Card.png");
-
-	GameObject* target = GameEngine::createGameObject("Target", glm::vec3(10.0f, 0.0f, 0.0f), glm::vec3(0.0f, 90.0f, 0.0f));
-	//card_component->moveAndRotateTo(target, 10.0f);
-
-	IAnimation* effect = new EffectAnimation();
+	//FlyCam* camera_controller = new FlyCam(camera, 5.0f, 10.0f);
 
 	GameManager::getInstance()->initialize();
 
 	while (!GameEngine::getInstance()->shouldClose())
 	{
-		if (GameEngine::getInstance()->isKeyPressed(GLFW_KEY_1))
-			effect->play(0);
-		else if (GameEngine::getInstance()->isKeyPressed(GLFW_KEY_2))
-			effect->play(1);
-
 		try
 		{
+			GameManager::getInstance()->gameLoop();
 			GameEngine::getInstance()->update();
 		}
 		catch (const std::exception& e)

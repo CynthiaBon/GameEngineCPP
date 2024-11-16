@@ -1,7 +1,9 @@
 #include "EffectAnimation.h"
 
-EffectAnimation::EffectAnimation()
+EffectAnimation::EffectAnimation(Transform* root)
 {
+	m_root = root;
+
 	Shader* shader = Shader::Find("Base Shader");
 
 	GameObject* spawn_object = GameEngine::createGameObject("Spawn effect");
@@ -46,12 +48,14 @@ void EffectAnimation::play(int id)
 	if (id == 0)
 	{
 		m_spawn_renderer->setActive(true);
+		m_spawn_renderer->getGameObject()->getTransform()->setPosition(m_root->getPosition());
 		m_spawn_animation->getGameObject()->getTransform()->setScale(glm::vec3(0.0f));
 		m_spawn_animation->scaleTo(glm::vec3(1.0f), 0.5f, easeSin);
 	}
 	else if (id == 1)
 	{
 		float duration = 0.5f;
+		glm::vec3 root_position = m_root->getPosition();
 
 		m_death_renderer_1->setActive(true);
 		m_death_renderer_2->setActive(true);
@@ -59,17 +63,17 @@ void EffectAnimation::play(int id)
 
 		m_death_animation_1->getGameObject()->getTransform()->setScale(glm::vec3(0.0f));
 		m_death_animation_1->scaleTo(glm::vec3(0.2f), duration, easeSin);
-		m_death_animation_1->getGameObject()->getTransform()->setPosition(glm::vec3(0.3f, 0.0f, 0.0f));
-		m_death_animation_1->moveTo(glm::vec3(0.6f, 0.5f, 0.0f), duration, easeOutQuad);
+		m_death_animation_1->getGameObject()->getTransform()->setPosition(glm::vec3(0.3f, 0.0f, 0.0f) + root_position);
+		m_death_animation_1->moveTo(glm::vec3(0.6f, 0.5f, 0.0f) + root_position, duration, easeOutQuad);
 
 		m_death_animation_2->getGameObject()->getTransform()->setScale(glm::vec3(0.0f));
 		m_death_animation_2->scaleTo(glm::vec3(0.2f), duration, easeSin);
-		m_death_animation_2->getGameObject()->getTransform()->setPosition(glm::vec3(0.0f, 0.0f, 0.3f));
-		m_death_animation_2->moveTo(glm::vec3(0.0f, 0.5f, 0.6f), duration, easeOutQuad);
+		m_death_animation_2->getGameObject()->getTransform()->setPosition(glm::vec3(0.0f, 0.0f, 0.3f) + root_position);
+		m_death_animation_2->moveTo(glm::vec3(0.0f, 0.5f, 0.6f) + root_position, duration, easeOutQuad);
 
 		m_death_animation_3->getGameObject()->getTransform()->setScale(glm::vec3(0.0f));
 		m_death_animation_3->scaleTo(glm::vec3(0.2f), duration, easeSin);
-		m_death_animation_3->getGameObject()->getTransform()->setPosition(glm::vec3(-0.15f, 0.0f, -0.15f));
-		m_death_animation_3->moveTo(glm::vec3(-0.3f, 0.5f, -0.3f), duration, easeOutQuad);
+		m_death_animation_3->getGameObject()->getTransform()->setPosition(glm::vec3(-0.15f, 0.0f, -0.15f) + root_position);
+		m_death_animation_3->moveTo(glm::vec3(-0.3f, 0.5f, -0.3f) + root_position, duration, easeOutQuad);
 	}
 }

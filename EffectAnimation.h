@@ -7,7 +7,7 @@
 class EffectAnimation : public IAnimation
 {
 public:
-	EffectAnimation();
+	EffectAnimation(Transform* root);
 	~EffectAnimation();
 
 	virtual void play(int id);
@@ -24,4 +24,6 @@ private:
 
 	MeshRenderer* m_death_renderer_3;
 	ObjectAnimation* m_death_animation_3;
+
+	Transform* m_root;
 };

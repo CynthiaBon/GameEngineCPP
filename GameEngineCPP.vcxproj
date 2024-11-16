@@ -19,9 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AghorAnimation.cpp" />
     <ClCompile Include="Card.cpp" />
-    <ClCompile Include="Chimimi.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="EffectAnimation.cpp" />
     <ClCompile Include="Engine\Sources\Camera.cpp" />
@@ -49,20 +47,14 @@
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Hand.cpp" />
     <ClCompile Include="Interpolator.cpp" />
-    <ClCompile Include="JoeAnimation.cpp" />
-    <ClCompile Include="LopmonAnimation.cpp" />
-    <ClCompile Include="MobAnimation.cpp" />
+    <ClCompile Include="MonsterExampleAnimation.cpp" />
     <ClCompile Include="ObjectAnimation.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="RacaillouAnimation.cpp" />
-    <ClCompile Include="SlimeAnimation.cpp" />
     <ClCompile Include="Sources\main.cpp" />
     <ClCompile Include="Terrain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AghorAnimation.h" />
     <ClInclude Include="Card.h" />
-    <ClInclude Include="Chimimi.h" />
     <ClInclude Include="Deck.h" />
     <ClInclude Include="EffectAnimation.h" />
     <ClInclude Include="Engine\Includes\Camera.h" />
@@ -96,13 +88,9 @@
     <ClInclude Include="Hand.h" />
     <ClInclude Include="IAnimation.h" />
     <ClInclude Include="Interpolator.h" />
-    <ClInclude Include="JoeAnimation.h" />
-    <ClInclude Include="LopmonAnimation.h" />
-    <ClInclude Include="MobAnimation.h" />
+    <ClInclude Include="MonsterExampleAnimation.h" />
     <ClInclude Include="ObjectAnimation.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="RacaillouAnimation.h" />
-    <ClInclude Include="SlimeAnimation.h" />
     <ClInclude Include="Terrain.h" />
   </ItemGroup>
   <ItemGroup>

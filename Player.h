@@ -16,6 +16,11 @@ public:
 	void draw();
 	void handToTerrain(int index);
 	void terrainToGraveyard(int index);
+	void handToGraveyard(int index);
+	int getHandCount();
+	int getTerrainCount();
+	Card* getTerrainCard(int index);
+	bool hasLost();
 
 private:
 	Deck* m_deck;

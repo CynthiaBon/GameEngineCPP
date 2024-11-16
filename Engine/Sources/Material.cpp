@@ -146,6 +146,22 @@ void Material::unbindTextures()
 	}
 }
 
+Texture* Material::getTexture()
+{
+	Texture* texture = nullptr;
+
+	for (ShaderProperty* exposed_property : m_exposed_properties)
+	{
+		if (exposed_property->type == "sampler2D" && exposed_property->name == "base_texture")
+		{
+			texture = static_cast<Texture*>(exposed_property->value);
+			return texture;
+		}
+	}
+
+	return texture;
+}
+
 Shader* Material::getShader()
 {
 	return m_shader;

@@ -88,13 +88,13 @@ void ObjectAnimation::scaleXTo(float x, float duration, float(*interp)(float))
 void ObjectAnimation::scaleYTo(float y, float duration, float(*interp)(float))
 {
 	glm::vec3 begin = getGameObject()->getTransform()->getScale();
-	m_scale_x = new Interpolator(begin.y, y, duration, interp);
+	m_scale_y = new Interpolator(begin.y, y, duration, interp);
 }
 
 void ObjectAnimation::scaleZTo(float z, float duration, float(*interp)(float))
 {
 	glm::vec3 begin = getGameObject()->getTransform()->getScale();
-	m_scale_x = new Interpolator(begin.z, z, duration, interp);
+	m_scale_z = new Interpolator(begin.z, z, duration, interp);
 }
 
 glm::vec3 ObjectAnimation::updateInterpolator(glm::vec3 value, Interpolator** x, Interpolator** y, Interpolator** z)

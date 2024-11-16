@@ -287,12 +287,14 @@ float GameEngine::getDeltaTime()
 
 bool GameEngine::shouldClose()
 {
-	return glfwWindowShouldClose(m_window);
+	return m_window == nullptr || glfwWindowShouldClose(m_window);
 }
 
 void GameEngine::exit()
 {
+	glfwSetWindowShouldClose(m_window, GLFW_TRUE);
 	glfwDestroyWindow(m_window);
+	m_window = nullptr;
 	glfwTerminate();
 }
 

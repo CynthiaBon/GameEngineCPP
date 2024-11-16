@@ -20,3 +20,6 @@ float easeInBounce(float x);
 float easeInOutBounce(float x);
 float easeInElastic(float x);
 float easeInOutCirc(float x);
+
+float shake(float x);
+float jump(float x);
